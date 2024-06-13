@@ -1,0 +1,79 @@
+body {
+  background-image: url('https://media.istockphoto.com/photos/abstract-blurred-car-in-parking-lot-background-picture-id1152048405?k=6&m=1152048405&s=170667a&w=0&h=o2U4g4j25nDo7dWVT-XPLZCAIzKg1ZWLjatntE9C6kg='); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: #00ffff;
+  background-image:linear-gradient(to right,black,#69359c);
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  background-image:linear-gradient(to right,black ,#966fd6 ,red);
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+about us:(pending)
+images pending
+
+

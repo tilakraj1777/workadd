@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Selection</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="number"] {
+        width: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+	 cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #itemsList {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<style>
+body {
+  background-image: url('https://www.bing.com/th/id/OGC.5bea1be750400f42834e8358f65bfb8c?pid=1.7&rurl=https%3a%2f%2fi.makeagif.com%2fmedia%2f1-29-2022%2fTo2_2f.gif&ehk=d1DQXXOWLa6rK61GJH4ZF6jF0rH%2bpS0J0FDalyAwP2I%3d');
+}
+
+</style>
+
+<div class="container">
+    <h2>Select Products</h2>
+    <form id="productForm">
+        <label><input type="checkbox" name="product" value="carwash">Car Wash - $10</label>
+        <label><input type="checkbox" name="product" value="charger">Electric Charger - $20</label>
+        <label><input type="checkbox" name="product" value="parking">Parking Repair Service - $30</label>
+	<label><input type="checkbox" name="product" value="Tyre">Car Puncture Service - $10</label>
+	<label><input type="checkbox" name="product" value="shampoo">Car Shampoo - $10</label>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1">
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    </form>
+    
+    <div id="itemsList"></div>
+</div>
+
+<script>
+function calculateTotal() {
+    const form = document.getElementById('productForm');
+    const checkboxes = form.querySelectorAll('input[name="product"]:checked');
+    const quantity = parseInt(form.querySelector('#quantity').value);
+    let total = 0;
+
+ checkboxes.forEach(function(checkbox) {
+        if (checkbox.value === 'carwash') {
+            total += 10 * quantity;
+        } else if (checkbox.value === 'charger') {
+            total += 20 * quantity;
+        } else if (checkbox.value === 'parking') {
+            total += 30 * quantity;
+        }
+    });
+
+    alert("Total: $" + total);
+}
+
+// AJAX form submission
+document.getElementById('productForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // You can use AJAX to send the formData to the server for further processing
+    // For demonstration, let's just log the formData
+    console.log(Object.fromEntries(formData));
+    
+    alert("Items selected: " + JSON.stringify(Object.fromEntries(formData)));
+});
+</script>
+
+</body>
+</html>

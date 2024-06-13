@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<center>
+<style>
+
+body  {
+  background-image: url('https://www.bing.com/th/id/OGC.8b2ed0da9bbbc7a454fa875a3e129358?pid=1.7&rurl=https%3a%2f%2fwww.washingtonpost.com%2fblogs%2fwonkblog%2ffiles%2f2016%2f06%2f0614_ParkingLot_SS.gif&ehk=k5FBRNvx3F2lIz1nwHC6UJEbauIgkMMKlg%2f%2fcMNlMPQ%3d');
+}
+</style>    <div id="login-form">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <div id="reservation-form" style="display: none;">
+        <h1>Reserve Parking Space</h1>
+        <form id="reservation-form">
+            <label for="parking-space">Select Parking Space:</label>
+            <select id="parking-space" name="parking-space">
+                <!-- Options will be populated dynamically -->
+            </select><br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            <button type="submit" onclick="reserve()">Reserve</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</center>
+</html>
